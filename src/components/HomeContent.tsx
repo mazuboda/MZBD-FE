@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
-import SlideImg from "./SlideImg";
+import SlideImg from "@components/SlideImg";
+import FeatureCard from "@components/FeatureCard";
 
 const HomeContent = () => {
   return (
@@ -19,15 +20,18 @@ const HomeContent = () => {
           마주보다
         </SubTitle>
       </TitleContainer>
+      <FeatureCard />
+      <ContentCard>
+
+      </ContentCard>
     </div>
   );
 };
 
 const TitleContainer = styled.div`
-  margin: 0 auto;
+  margin: 245px auto 65px;
   width: 1060px;
-  margin: 145px auto;
-`;
+  `;
 
 const Mazu = styled.div`
   font-family: Noto Sans KR;
@@ -72,6 +76,14 @@ const SubTitle = styled.div`
   line-height: 72px;
   letter-spacing: -0.1em;
   text-align: left;
+`;
+
+const ContentCard = styled.div`
+  width: 1060px;
+  height: 649px;
+  border-radius: 30px;
+  margin: 245px auto;
+  background: linear-gradient(180deg, rgba(213, 213, 213, 0.63) 0%, rgba(254, 233, 241, 0) 100%);
 `;
 
 export default HomeContent;
