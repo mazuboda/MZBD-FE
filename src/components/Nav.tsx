@@ -1,9 +1,11 @@
 import { Typography } from '@mui/material';
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 const Nav = () => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   return (
     <div style={{
@@ -16,16 +18,20 @@ const Nav = () => {
         </Banner>
         <AppBarContainer>
           <LeftItemContainer>
-            <Typography variant="h6" style={{
-              fontFamily: "Roboto",
-              fontSize: '30px',
-              fontWeight: 700,
-              lineHeight: '35px',
-              letterSpacing: '-0.2em',
-              textAlign: 'center',
-              color: "#FF679D",
-              cursor: "pointer"
-            }}>
+            <Typography variant="h6"
+              onClick={() => {
+                navigate("/");
+              }}
+              style={{
+                fontFamily: "Roboto",
+                fontSize: '30px',
+                fontWeight: 700,
+                lineHeight: '35px',
+                letterSpacing: '-0.2em',
+                textAlign: 'center',
+                color: "#FF679D",
+                cursor: "pointer"
+              }}>
               MZBD
             </Typography>
           </LeftItemContainer>
@@ -62,7 +68,9 @@ const Nav = () => {
           <RightItemContainer>
             <div>마주보다 님</div>
             <div>My</div>
-            <div>LOGOUT</div>
+            <div onClick={() => {
+              navigate("/login");
+            }}>LOGOUT</div>
           </RightItemContainer>
         </AppBarContainer>
       </div >
