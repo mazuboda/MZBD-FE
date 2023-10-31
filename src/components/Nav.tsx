@@ -13,7 +13,9 @@ const Nav = () => {
       position: "relative",
     }}>
       <div onMouseLeave={() => setIsHovered(false)}>
-        <Banner>
+        <Banner onClick={() => {
+          navigate("/notice");
+        }}>
           회원 가입시 무료 배달 쿠폰 제공
         </Banner>
         <AppBarContainer>
@@ -194,6 +196,12 @@ const Banner = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline #FF679DB2 solid;
+      text-underline-position:under;
+    }
   `;
 
 export default Nav;
