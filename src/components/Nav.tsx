@@ -69,7 +69,9 @@ const Nav = () => {
 
           <RightItemContainer>
             <div>마주보다 님</div>
-            <div>My</div>
+            <div onClick={() => {
+              navigate("/mypage");
+            }}>My</div>
             <div onClick={() => {
               navigate("/login");
             }}>LOGOUT</div>
