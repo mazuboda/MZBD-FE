@@ -1,7 +1,21 @@
 import CompanyLogo from "@assets/images/CompanyLogo.png";
+import { useLocation } from "react-router-dom";
 import { styled } from "styled-components";
 
+const footerShowingPages = [
+  "/",
+  "/login",
+  "/notice",
+  "/mypage",
+];
+
 const Footer = () => {
+  const location = useLocation();
+
+  if (!footerShowingPages.includes(location.pathname)) {
+    return null;
+  }
+
   return (
     <FooterContainer>
       <InfoContainer>
@@ -10,7 +24,7 @@ const Footer = () => {
           <InfoTitle>
             company info.
           </InfoTitle>
-          <br />
+          {/* <br /> */}
           <InfoItem>
             회사명: 마주보다
           </InfoItem>
@@ -27,38 +41,51 @@ const Footer = () => {
             대표 번호:
           </InfoItem>
         </CompanyInfo>
-        <InfoTitle>
-          SNS
-        </InfoTitle>
+        <ContactInfo>
+          <InfoTitle>
+            SNS
+          </InfoTitle>
+        </ContactInfo>
       </InfoContainer>
     </FooterContainer>
   );
 };
 
 const FooterContainer = styled.div`
+  grid-column: 1 / 4;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-  padding: 20px 145px;
   background-color: #FFFFFF;
   width: 100%;
   height: 300px;
 `;
 
 const InfoContainer = styled.div`
-  display: flex;
+  display: grid;
+  width: 1060px;
+  grid-template-columns: repeat(12, 1fr);
   gap: 20px;
 `;
 
 const Image = styled.img`
+  grid-column: 1 / 2;
   width: 205px;
   height: 200px;
-  margin-right: 85px;
+  transform: translate(-76.49px, 0px);
+  position: absolute;
+  padding-top: 43px;
 `;
 
 const CompanyInfo = styled.div`
+  grid-column: 3 / 7;
   font-size: 14px;
   line-height: 1.5;
+  padding-top: 15px
+`;
+
+const ContactInfo = styled(CompanyInfo)`
+  grid-column: 7 / 8;
 `;
 
 const InfoTitle = styled.div`
@@ -68,7 +95,6 @@ const InfoTitle = styled.div`
   line-height: 35px;
   letter-spacing: -0.1em;
   text-align: left;
-  margin-right: 145px;
 `;
 
 const InfoItem = styled.div`
@@ -78,6 +104,7 @@ const InfoItem = styled.div`
   line-height: 19px;
   letter-spacing: -0.1em;
   text-align: left;
+  margin-bottom: 5px;
 `;
 
 export default Footer;

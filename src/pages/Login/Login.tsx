@@ -3,7 +3,10 @@ import { styled } from "styled-components";
 
 const Login = () => {
   return (
-    <div>
+    <div style={{
+      width: "1060px",
+      margin: "0 auto",
+    }}>
       <LoginContainer>
         <CakeImage src={CompanyLogo} alt="Company Logo" />
         <div>
@@ -27,7 +30,7 @@ const LoginContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 150px auto;
+  margin: 220px auto;
 `;
 
 const CakeImage = styled.img`

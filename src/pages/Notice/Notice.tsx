@@ -20,7 +20,7 @@ const Notice = () => {
 };
 
 const NoticeContainer = styled.div`
-  padding: 40px;
+  padding: 163px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@ const NoticeContainer = styled.div`
 `;
 
 const NoticeTitle = styled.h2`
-  margin-bottom: 30px;
+  margin-bottom: 18px;
   text-align: center;
   color: #4A4A4A;
   font-family: Noto Sans KR;

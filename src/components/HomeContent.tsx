@@ -7,6 +7,7 @@ const HomeContent = () => {
     <div style={{
       margin: "0 auto",
       width: "1060px",
+      paddingBottom: "245px",
     }}>
       <SlideImg />
       <Mazu>
@@ -85,7 +86,7 @@ const ContentCard = styled.div`
   width: 1060px;
   height: 649px;
   border-radius: 30px;
-  margin: 245px auto;
+  margin: 245px auto 0px auto;
   background: linear-gradient(180deg, rgba(213, 213, 213, 0.63) 0%, rgba(254, 233, 241, 0) 100%);
 `;
 

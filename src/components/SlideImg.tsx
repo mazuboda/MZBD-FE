@@ -43,7 +43,7 @@ export const SlideImgContainer = styled.div`
   position: relative;
   overflow: hidden;
   background-color: #D9D9D9;
-  margin: 46px auto;
+  margin: 0px auto;
 `;
 
 export const ArrowButton = styled.button`

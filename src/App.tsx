@@ -1,3 +1,4 @@
+import Footer from "@components/Footer";
 import Nav from "@components/Nav";
 import Home from '@pages/Home/Home';
 import Login from "@pages/Login/Login";
@@ -20,6 +21,7 @@ function App() {
             <Route path="/mypage" element={<MyPage />} />
           </Routes>
         </ContentContainer>
+        <Footer />
       </RootContainer>
     </Router>
   );
@@ -27,13 +29,14 @@ function App() {
 const RootContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1060px 1fr;
+  grid-template-rows: auto auto auto;
 `;
 
 const ContentContainer = styled.div`
-  display: grid;
+  /* display: grid; */
   grid-column: 1 / 4;
   /* grid-template-columns: repeat(12, 1fr); */
-  grid-gap: 24px;
+  /* grid-gap: 20px; */
 `;
 
 export default App;
