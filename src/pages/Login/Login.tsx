@@ -1,11 +1,9 @@
 import CompanyLogo from "@assets/images/CompanyLogo.png";
-import Nav from "@components/Nav";
 import { styled } from "styled-components";
 
 const Login = () => {
   return (
     <div>
-      <Nav />
       <LoginContainer>
         <CakeImage src={CompanyLogo} alt="Company Logo" />
         <div>
@@ -38,7 +36,6 @@ const CakeImage = styled.img`
   margin-right: 245px;
 `;
 
-// 메시지 컨테이너
 const MessageContainer = styled.div`
   text-align: center;
   margin-bottom: 30px;
@@ -51,7 +48,6 @@ const MessageContainer = styled.div`
   text-align: center;
 `;
 
-// 버튼 컴포넌트
 const ActionButton = styled.button`
   background-color: #FEE500;
   border-radius: 50px;

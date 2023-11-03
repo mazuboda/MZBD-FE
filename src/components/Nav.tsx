@@ -9,16 +9,27 @@ const Nav = () => {
 
   return (
     <div style={{
-      minWidth: "964px",
+      display: "grid",
+      gridColumn: "1 / 4",
+      gridTemplateColumns: "subgrid",
+      gridTemplateRows: "auto auto",
       position: "relative",
+      zIndex: 1000,
     }}>
-      <div onMouseLeave={() => setIsHovered(false)}>
-        <Banner onClick={() => {
-          navigate("/notice");
+      <Banner onClick={() => {
+        navigate("/notice");
+      }}>
+        회원 가입시 무료 배달 쿠폰 제공
+      </Banner>
+      <AppBarContainer onMouseLeave={() => setIsHovered(false)}>
+        <div style={{
+          height: "55px",
+          alignItems: "center",
+          display: "flex",
+          gridColumn: "2 / 3",
+          flexDirection: "row",
+          justifyContent: "space-between",
         }}>
-          회원 가입시 무료 배달 쿠폰 제공
-        </Banner>
-        <AppBarContainer>
           <LeftItemContainer>
             <Typography variant="h6"
               onClick={() => {
@@ -47,7 +58,11 @@ const Nav = () => {
               <CenterItem
                 onMouseEnter={() => setIsHovered(true)}
               >
-                견적 내기
+                <div>견적 내기</div>
+                <SubMenuContainer show={isHovered}>
+                  <div>새 디자인</div>
+                  <div>내 디자인</div>
+                </SubMenuContainer>
               </CenterItem>
               <CenterItem
                 onMouseEnter={() => setIsHovered(true)}
@@ -57,16 +72,23 @@ const Nav = () => {
               <CenterItem
                 onMouseEnter={() => setIsHovered(true)}
               >
-                견적 확인
+                <div>견적 확인</div>
+                <SubMenuContainer show={isHovered}>
+                  <div>고객님</div>
+                  <div>사장님</div>
+                </SubMenuContainer>
               </CenterItem>
               <CenterItem
                 onMouseEnter={() => setIsHovered(true)}
               >
-                채팅
+                <div>채팅</div>
+                <SubMenuContainer show={isHovered}>
+                  <div>고객님</div>
+                  <div>사장님</div>
+                </SubMenuContainer>
               </CenterItem>
             </CenterItemWrapper>
           </CenterItemContainer>
-
           <RightItemContainer>
             <div>마주보다 님</div>
             <div onClick={() => {
@@ -76,60 +98,28 @@ const Nav = () => {
               navigate("/login");
             }}>LOGOUT</div>
           </RightItemContainer>
-        </AppBarContainer>
-      </div >
-      {isHovered && (
-        <SubMenuContainer>
-          <LeftItemContainer />
-          <CenterItemContainer>
-            <CenterItemWrapper>
-              <CenterItem />
-              <CenterItem>
-                <SubMenuList>
-                  <div>새 디자인</div>
-                  <div>내 디자인</div>
-                </SubMenuList>
-              </CenterItem>
-              <CenterItem />
-              <CenterItem>
-                <SubMenuList>
-                  <div>고객님</div>
-                  <div>사장님</div>
-                </SubMenuList>
-              </CenterItem>
-              <CenterItem>
-                <SubMenuList>
-                  <div>고객님</div>
-                  <div>사장님</div>
-                </SubMenuList>
-              </CenterItem>
-            </CenterItemWrapper>
-          </CenterItemContainer>
-          <RightItemContainer />
-        </SubMenuContainer>
-      )}
+        </div>
+        <SubMenuBackground show={isHovered} />
+      </AppBarContainer>
     </div>
   );
 };
 const AppBarContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 8px 32px;
+  height: 55px;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
   border-bottom: 1px #DBDBDB solid;
   background-color: #FFFFFF;
-`;
-const SubMenuContainer = styled(AppBarContainer)`
-  box-sizing: border-box;
-  position:absolute;
-  width: 100%;
-  z-index: 100;
+  position: relative;
 `;
 const LeftItemContainer = styled.div`
   width: 256px;
   align-content: center;
   display: flex;
   justify-content: left;
+  grid-column-start: 2;
 `;
 const CenterItemContainer = styled.div`
   width: 512px;
@@ -140,7 +130,7 @@ const CenterItemContainer = styled.div`
 `;
 const CenterItemWrapper = styled.div`
   display: flex;
-  gap: 16px;
+  gap: 40px;
   font-family: Noto Sans KR;
   font-size: 20px;
   font-weight: 500;
@@ -150,8 +140,11 @@ const CenterItemWrapper = styled.div`
   color: #343434;
 `;
 const CenterItem = styled.div`
-  width: 76px;
   cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 `;
 const RightItemContainer = styled.div`
   width: 256px;
@@ -187,6 +180,8 @@ const SubMenuList = styled.ul`
 `;
 
 const Banner = styled.div`
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
     background-color: #FFFFFF;
     color: #FF679DB2;
     text-align: center;
@@ -205,5 +200,31 @@ const Banner = styled.div`
       text-underline-position:under;
     }
   `;
+const SubMenuBackground = styled.div<{ show: boolean }>`
+  display: ${({ show }) => show ? "block" : "none"};
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  height: 139.33px;
+  border-bottom: 1px #DBDBDB solid;
+  background-color: #FFFFFF;
+`;
+const SubMenuContainer = styled.div<{ show: boolean }>`
+  display: ${({ show }) => show ? "flex" : "none"};
+  position: absolute;
+  margin-top: 53px;
+  flex-direction: column;
+  gap: 12px;
+  white-space: nowrap;
+
+  color: #7D7D7D;
+  text-align: center;
+  font-family: Noto Sans KR;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -3px;
+`;
 
 export default Nav;

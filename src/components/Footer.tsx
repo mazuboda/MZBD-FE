@@ -1,5 +1,5 @@
-import { styled } from "styled-components";
 import CompanyLogo from "@assets/images/CompanyLogo.png";
+import { styled } from "styled-components";
 
 const Footer = () => {
   return (
@@ -8,27 +8,27 @@ const Footer = () => {
         <Image src={CompanyLogo} alt="Company Logo" />
         <CompanyInfo>
           <InfoTitle>
-          company info.
+            company info.
           </InfoTitle>
           <br />
           <InfoItem>
-          회사명: 마주보다
+            회사명: 마주보다
           </InfoItem>
           <InfoItem>
-          사업자 등록번호:
+            사업자 등록번호:
           </InfoItem>
           <InfoItem>
-          대표자:
+            대표자:
           </InfoItem>
           <InfoItem>
-          투자/제휴/입점 문의:
+            투자/제휴/입점 문의:
           </InfoItem>
           <InfoItem>
-          대표 번호:
+            대표 번호:
           </InfoItem>
         </CompanyInfo>
         <InfoTitle>
-            SNS
+          SNS
         </InfoTitle>
       </InfoContainer>
     </FooterContainer>
@@ -41,6 +41,7 @@ const FooterContainer = styled.div`
   align-items: flex-start;
   padding: 20px 145px;
   background-color: #FFFFFF;
+  width: 100%;
   height: 300px;
 `;
 

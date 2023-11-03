@@ -1,4 +1,3 @@
-import Nav from "@components/Nav";
 import Tables from "@components/Tables";
 
 import { styled } from "styled-components";
@@ -6,8 +5,10 @@ import { styled } from "styled-components";
 const Notice = () => {
 
   return (
-    <div>
-      <Nav />
+    <div style={{
+      width: "1060px",
+      margin: "0 auto",
+    }}>
       <NoticeContainer>
         <NoticeTitle>
           공지사항 및 이벤트

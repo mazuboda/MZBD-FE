@@ -1,5 +1,4 @@
 import MyPageContent from "@components/MyPageContent";
-import Nav from "@components/Nav";
 import SubMenu from "@components/SubMenu";
 import { useState } from "react";
 import { styled } from "styled-components";
@@ -13,7 +12,6 @@ const MyPage = () => {
 
   return (
     <div>
-      <Nav />
       <MyPageTitle>
         마이페이지
       </MyPageTitle>

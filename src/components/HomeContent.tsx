@@ -1,10 +1,13 @@
-import { styled } from "styled-components";
-import SlideImg from "@components/SlideImg";
 import FeatureCard from "@components/FeatureCard";
+import SlideImg from "@components/SlideImg";
+import { styled } from "styled-components";
 
 const HomeContent = () => {
   return (
-    <div>
+    <div style={{
+      margin: "0 auto",
+      width: "1060px",
+    }}>
       <SlideImg />
       <Mazu>
         사랑하는 사람과 지금 마주 보세요
