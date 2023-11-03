@@ -1,7 +1,6 @@
 import Footer from "@components/Footer";
 import HomeContent from "@components/HomeContent";
 import Nav from '@components/Nav';
-import { height } from "@mui/system";
 
 const Home = () => {
   return (
