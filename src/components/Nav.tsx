@@ -1,3 +1,4 @@
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import { Typography } from '@mui/material';
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -94,6 +95,7 @@ const Nav = () => {
             <div onClick={() => {
               navigate("/mypage");
             }}>My</div>
+            <NotificationsNoneIcon style={{ paddingTop: "5px" }} />
             <div onClick={() => {
               navigate("/login");
             }}>LOGOUT</div>
@@ -144,7 +146,6 @@ const CenterItem = styled.div`
   position: relative;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 `;
 const RightItemContainer = styled.div`
   width: 256px;
@@ -161,22 +162,6 @@ const RightItemContainer = styled.div`
   line-height: 29px;
   letter-spacing: -0.2em;
   color: #7D7D7D;
-`;
-const SubMenuList = styled.ul`
-  width: 100%;
-  margin: 0px;
-  padding: 0px;
-
-  font-family: Noto Sans KR;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 22px;
-  letter-spacing: -0.2em;
-  text-align: center;
-  color: #7D7D7D;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
 `;
 
 const Banner = styled.div`

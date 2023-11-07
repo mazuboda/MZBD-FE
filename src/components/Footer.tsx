@@ -6,7 +6,7 @@ const footerShowingPages = [
   "/",
   "/login",
   "/notice",
-  "/mypage",
+  // "/mypage",
 ];
 
 const Footer = () => {
@@ -95,6 +95,7 @@ const InfoTitle = styled.div`
   line-height: 35px;
   letter-spacing: -0.1em;
   text-align: left;
+  padding-bottom: 25px;
 `;
 
 const InfoItem = styled.div`

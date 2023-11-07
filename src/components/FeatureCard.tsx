@@ -1,6 +1,5 @@
-import React from 'react';
-import { styled } from 'styled-components';
 import CardImg from "@assets/images/CardImg.png";
+import { styled } from 'styled-components';
 
 const FeatureCard = () => {
   return (
@@ -35,7 +34,7 @@ const CardContainer = styled.div`
 const Card = styled.div<{ img: string }>`
   width: 180px;
   height: 180px;
-  background: url(${props => props.img}) no-repeat center;
+  background: url(${({ img }) => img}) no-repeat center;
   background-size: cover;
   border-radius: 30px;
 `;

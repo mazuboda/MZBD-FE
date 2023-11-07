@@ -33,10 +33,7 @@ const RootContainer = styled.div`
 `;
 
 const ContentContainer = styled.div`
-  /* display: grid; */
   grid-column: 1 / 4;
-  /* grid-template-columns: repeat(12, 1fr); */
-  /* grid-gap: 20px; */
 `;
 
 export default App;

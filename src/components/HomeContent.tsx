@@ -44,6 +44,7 @@ const Mazu = styled.div`
   line-height: 43px;
   letter-spacing: -0.1em;
   text-align: center;
+  padding-top: 20px;
 `;
 
 const MazuButton = styled.div`
@@ -62,6 +63,7 @@ const MazuButton = styled.div`
   color: #FFFFFF;
   margin: 10px auto;
   cursor: pointer;
+  margin-top: 21px;
 `;
 
 const MainTitle = styled.div`

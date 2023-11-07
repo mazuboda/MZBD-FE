@@ -11,7 +11,10 @@ const MyPage = () => {
   };
 
   return (
-    <div>
+    <div style={{
+      width: "1060px",
+      margin: "0 auto",
+    }}>
       <MyPageTitle>
         마이페이지
       </MyPageTitle>
@@ -41,9 +44,9 @@ const MyPageTitle = styled.h2`
 const MyPageContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 94px;
-  margin-top: 116px;
+  margin-top: 50px;
 `;
 
 const ContentWrapper = styled.div`
