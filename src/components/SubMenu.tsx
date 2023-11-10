@@ -27,10 +27,10 @@ const SubMenu: React.FC<SubMenuProps> = ({
         <MenuGroup>
           <MenuTitle>사장님</MenuTitle>
           <MenuList>
-            <MenuItem>프로필 조회</MenuItem>
-            <MenuItem>의뢰요청 조회</MenuItem>
-            <MenuItem>후기 조회</MenuItem>
-            <MenuItem>사업자 인증</MenuItem>
+            <MenuItem onClick={() => handleMenuClick("프로필 조회")}>프로필 조회</MenuItem>
+            <MenuItem onClick={() => handleMenuClick("의뢰요청 조회")}>의뢰요청 조회</MenuItem>
+            <MenuItem onClick={() => handleMenuClick("후기 조회")}>후기 조회</MenuItem>
+            <MenuItem onClick={() => handleMenuClick("사업자 인증")}>사업자 인증</MenuItem>
           </MenuList>
         </MenuGroup>
       </MenuGroupContainer>

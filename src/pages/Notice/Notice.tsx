@@ -13,7 +13,7 @@ const Notice = () => {
         <NoticeTitle>
           공지사항 및 이벤트
         </NoticeTitle>
-        <Tables search />
+        <Tables />
       </NoticeContainer>
     </div >
   );
