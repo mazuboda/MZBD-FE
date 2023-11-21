@@ -53,6 +53,7 @@ const Nav = () => {
             <CenterItemWrapper>
               <CenterItem
                 onMouseEnter={() => setIsHovered(true)}
+                onClick={() => navigate("/store")}
               >
                 주변 가게
               </CenterItem>
