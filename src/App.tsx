@@ -2,6 +2,7 @@ import Footer from "@components/Footer";
 import Nav from "@components/Nav";
 import Home from '@pages/Home/Home';
 import Login from "@pages/Login/Login";
+import Map from "@pages/Map/Map";
 import MyPage from "@pages/MyPage/MyPage";
 import Notice from "@pages/Notice/Notice";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/notice" element={<Notice />} />
             <Route path="/mypage" element={<MyPage />} />
+            <Route path="/store" element={<Map />} />
           </Routes>
         </ContentContainer>
         <Footer />

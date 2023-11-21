@@ -1,3 +1,4 @@
+import BusinessCert from "@components/BusinessCert";
 import OrderCard from "@components/OrderCard";
 import Tables from "@components/Tables";
 import UserInfo from "@components/UserInfo";
@@ -24,6 +25,14 @@ const MyPageContent: React.FC<MyPageContentProps> = ({
       );
     case "회원정보":
       return <UserInfo />;
+    case "프로필 조회":
+      return null;
+    case "의뢰요청 조회":
+      return null;
+    case "후기 조회":
+      return null;
+    case "사업자 인증":
+      return <BusinessCert />;
   }
 
   return (

@@ -5,15 +5,11 @@ import React from "react";
 import { styled } from "styled-components";
 
 interface TablesProps {
-  button?: boolean;
-  search?: boolean;
   small?: boolean;
   menu?: string;
 }
 
 const Tables: React.FC<TablesProps> = ({
-  button,
-  search,
   small,
   menu
 }) => {
@@ -150,62 +146,52 @@ const Tables: React.FC<TablesProps> = ({
             </PaginationContainer>
           </div>
         );
+      default:
+        return (
+          <div>
+            <StyledTable small={small}>
+              <TableHead>
+                <TableRow>
+                  <TableHeadCell>NO</TableHeadCell>
+                  <TableHeadCell>제목</TableHeadCell>
+                  <TableHeadCell>작성일</TableHeadCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {tmp.map((notice) => (
+                  <TableRow key={notice.no}>
+                    <TableBodyCell style={{
+                      color: "#7D7D7D",
+                      width: "100px"
+                    }}>{notice.no}
+                    </TableBodyCell>
+                    <TableBodyCell>{notice.title}</TableBodyCell>
+                    <TableBodyCell style={{
+                      color: "#7D7D7D",
+                      width: "100px"
+                    }}>{notice.date}</TableBodyCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </StyledTable>
+            <WritingButton>글 쓰기</WritingButton>
+            <PaginationContainer>
+              <KeyboardArrowLeftIcon style={{ cursor: "pointer", color: "#4A4A4A" }} />
+              1
+              <KeyboardArrowRightIcon style={{ cursor: "pointer", color: "#4A4A4A" }} />
+            </PaginationContainer>
+            <SearchContainer>
+              <SearchInput type="text" />
+              <SearchButton>검색</SearchButton>
+            </SearchContainer>
+          </div>
+        );
     }
   };
   return (
     <div>
       {renderMenuComponent(menu)}
-      {/* {menu === "포인트/쿠폰내역" && (
-        <PointCoopon>
-          <PointTitle>
-            포인트
-            <PointContent>3000P</PointContent>
-          </PointTitle>
-          <CooponTitle>
-            쿠폰
-            <PointContent>2장</PointContent>
-          </CooponTitle>
-        </PointCoopon>
-      )}
-      <StyledTable small={small}>
-        <TableHead>
-          <TableRow>
-            <TableHeadCell>NO</TableHeadCell>
-            <TableHeadCell>제목</TableHeadCell>
-            <TableHeadCell>작성일</TableHeadCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {tmp.map((notice) => (
-            <TableRow key={notice.no}>
-              <TableBodyCell style={{
-                color: "#7D7D7D",
-                width: "100px"
-              }}>{notice.no}
-              </TableBodyCell>
-              <TableBodyCell>{notice.title}</TableBodyCell>
-              <TableBodyCell style={{
-                color: "#7D7D7D",
-                width: "100px"
-              }}>{notice.date}</TableBodyCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </StyledTable>
-      {button && (
-        <WritingButton>글 쓰기</WritingButton>
-      )}
-      <PaginationContainer>
-        <KeyboardArrowLeftIcon style={{ cursor: "pointer", color: "#4A4A4A" }} />
-        1
-        <KeyboardArrowRightIcon style={{ cursor: "pointer", color: "#4A4A4A" }} />
-      </PaginationContainer>
-      {search && (
-        <SearchContainer>
-          <SearchInput type="text" />
-          <SearchButton>검색</SearchButton>
-        </SearchContainer>
-      )} */}
+
     </div>
   );
 };

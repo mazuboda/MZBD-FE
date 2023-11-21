@@ -17,6 +17,7 @@
     "@types/react-router-dom": "^5.3.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-kakao-maps-sdk": "^1.1.24",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
     "styled-components": "^6.1.0",
@@ -50,6 +51,7 @@
   "devDependencies": {
     "@craco/craco": "^7.1.0",
     "@types/styled-components": "^5.1.29",
-    "craco-alias": "^3.0.1"
+    "craco-alias": "^3.0.1",
+    "kakao.maps.d.ts": "^0.1.39"
   }
 }

@@ -18,10 +18,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": [
+      "kakao.maps.d.ts"
+    ]
   },
   "include": [
     "src"
   ],
-  "extends": "./tsconfig.extend.json"
+  "extends": "./tsconfig.extend.json",
+  
 }
