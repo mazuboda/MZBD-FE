@@ -1,5 +1,6 @@
 import BusinessCert from "@components/BusinessCert";
 import OrderCard from "@components/OrderCard";
+import ProfileView from "@components/ProfileView";
 import Tables from "@components/Tables";
 import UserInfo from "@components/UserInfo";
 import React from "react";
@@ -26,7 +27,7 @@ const MyPageContent: React.FC<MyPageContentProps> = ({
     case "회원정보":
       return <UserInfo />;
     case "프로필 조회":
-      return null;
+      return <ProfileView />;
     case "의뢰요청 조회":
       return null;
     case "후기 조회":
