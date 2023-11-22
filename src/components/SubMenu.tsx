@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
 
 interface SubMenuProps {
@@ -8,6 +9,8 @@ interface SubMenuProps {
 const SubMenu: React.FC<SubMenuProps> = ({
   onSelectedMenu
 }) => {
+  const navigate = useNavigate();
+
   const handleMenuClick = (menu: string) => {
     onSelectedMenu(menu);
   };
@@ -34,7 +37,7 @@ const SubMenu: React.FC<SubMenuProps> = ({
           </MenuList>
         </MenuGroup>
       </MenuGroupContainer>
-      <LeaveButton>
+      <LeaveButton onClick={() => navigate("/resign")}>
         탈퇴하기
       </LeaveButton>
     </MenuContainer>
