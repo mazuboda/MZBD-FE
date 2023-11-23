@@ -38,10 +38,10 @@ const MapComponents = () => {
                     setSelectedOverlay(false);
                   }}
                 />
-                <OverlayTitle onClick={() => setSelectedOverlay(true)}>월정리 해수욕장</OverlayTitle>
+                <OverlayTitle onClick={() => setSelectedOverlay(true)}>마주보다</OverlayTitle>
                 <OverlayDesc>
                   <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/place_thumb.png" alt="" />
-                  <OverlayDescAddress>제주특별자치도 제주시 구좌읍 월정리 33-3</OverlayDescAddress>
+                  <OverlayDescAddress>충청남도 아산시 신창면 순천향로 22</OverlayDescAddress>
                 </OverlayDesc>
               </StyledOverlay>
             </CustomOverlayMap>

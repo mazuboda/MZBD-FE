@@ -5,6 +5,8 @@ import Login from "@pages/Login/Login";
 import Map from "@pages/Map/Map";
 import MyPage from "@pages/MyPage/MyPage";
 import Notice from "@pages/Notice/Notice";
+import Refund from "@pages/Refund/Refund";
+import Resign from "@pages/Resign/Resign";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { styled } from "styled-components";
 import './App.css';
@@ -21,6 +23,8 @@ function App() {
             <Route path="/notice" element={<Notice />} />
             <Route path="/mypage" element={<MyPage />} />
             <Route path="/store" element={<Map />} />
+            <Route path="/resign" element={<Resign />} />
+            <Route path="/refund" element={<Refund />} />
           </Routes>
         </ContentContainer>
         <Footer />

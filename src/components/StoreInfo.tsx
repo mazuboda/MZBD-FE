@@ -1,8 +1,8 @@
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
-import InstragramIcon from "@mui/icons-material/Instagram";
 import StarOutlineRoundedIcon from "@mui/icons-material/StarOutlineRounded";
 import StarRoundedIcon from "@mui/icons-material/StarRounded";
+import InstragramIcon from "@styles/InstragramIcon";
 import styled from "styled-components";
 
 
