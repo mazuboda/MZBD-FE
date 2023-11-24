@@ -128,7 +128,7 @@ const ProfileView = () => {
         <ProfileViewNoticeContainer>
           <ProfileViewSubTitle>공지사항</ProfileViewSubTitle>
           <NoticeContainer>
-            <NoticeInput></NoticeInput>
+            <NoticeDiv />
             <NoticeButton>등록</NoticeButton>
           </NoticeContainer>
         </ProfileViewNoticeContainer>
@@ -243,7 +243,7 @@ const ProfileViewEmailInput = styled(ProfileViewInput)`
 
 const ProfileEmailSelect = styled.select`
   width: 200px;
-  height: 34px;
+  height: 33.6px;
   border: 1px #D9D9D9 solid;
   margin-bottom: 26px;
 
@@ -401,9 +401,9 @@ const NoticeContainer = styled.div`
   margin: 0 auto;
 `;
 
-const NoticeInput = styled.input`
+const NoticeDiv = styled.div`
+  height: 30px;
   flex: 1;
-  padding: 10px;
   border: 1px solid #e0e0e0;
   border-radius: 4px 0 0 4px;
   outline: none;
@@ -411,7 +411,7 @@ const NoticeInput = styled.input`
 
 const NoticeButton = styled.button`
   width: 99px;
-  height: 37px;
+  height: 31.6px;
   padding: 10px 15px;
   border: 1px #D9D9D9 solid;
   background-color: #F7F7F7;
