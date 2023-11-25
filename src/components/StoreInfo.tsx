@@ -36,6 +36,8 @@ const StoreInfo = () => {
               <InfoWindowRating>
                 <div style={{
                   color: "#FEE500",
+                  width: "80px",
+                  display: "flex"
                 }}>
                   <StarRoundedIcon fontSize="small" />
                   <StarRoundedIcon fontSize="small" />
@@ -205,7 +207,7 @@ const InfoWindowRatingText = styled.div`
   font-size: 15px;
   font-weight: 500;
   line-height: 14px;
-  margin-left: 8px;
+  margin-left: 20px;
 `;
 
 const InfoWindowStoreWrap = styled.div`
