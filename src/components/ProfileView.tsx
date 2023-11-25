@@ -131,7 +131,7 @@ const ProfileView = () => {
           <ProfileViewSubTitle>공지사항</ProfileViewSubTitle>
           <NoticeContainer>
             <NoticeDiv />
-            <NoticeButton onClick={() => setSelectedNotice(false)}>등록</NoticeButton>
+            <NoticeButton onClick={() => setSelectedNotice(true)}>등록</NoticeButton>
           </NoticeContainer>
           {selectedNotice && <StoreNotice onClose={() => setSelectedNotice(false)} />}
         </ProfileViewNoticeContainer>
