@@ -1,3 +1,4 @@
+import StoreNotice from "@components/StoreNotice";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import InstragramIcon from "@styles/InstragramIcon";
@@ -16,6 +17,7 @@ interface DayBoxProps {
 const ProfileView = () => {
   const [inputValue, setInputValue] = useState<string>("https://www.instagram.com/");
   const [selectedDays, setSelectedDays] = useState<string[]>([]);
+  const [selectedNotice, setSelectedNotice] = useState<boolean>(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -129,8 +131,9 @@ const ProfileView = () => {
           <ProfileViewSubTitle>공지사항</ProfileViewSubTitle>
           <NoticeContainer>
             <NoticeDiv />
-            <NoticeButton>등록</NoticeButton>
+            <NoticeButton onClick={() => setSelectedNotice(false)}>등록</NoticeButton>
           </NoticeContainer>
+          {selectedNotice && <StoreNotice onClose={() => setSelectedNotice(false)} />}
         </ProfileViewNoticeContainer>
         <ProfileViewPhotoContainer>
           <div style={{ display: "flex", alignItems: "center", gap: "30px" }}>
@@ -399,6 +402,7 @@ const NoticeContainer = styled.div`
   border-radius: 4px;
   width: 637px;
   margin: 0 auto;
+  position: relative;
 `;
 
 const NoticeDiv = styled.div`
