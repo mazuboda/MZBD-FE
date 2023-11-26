@@ -1,6 +1,8 @@
 import BusinessCert from "@components/BusinessCert";
 import OrderCard from "@components/OrderCard";
 import ProfileView from "@components/ProfileView";
+import Request from "@components/Request";
+import Review from "@components/Review";
 import Tables from "@components/Tables";
 import UserInfo from "@components/UserInfo";
 import React from "react";
@@ -29,9 +31,9 @@ const MyPageContent: React.FC<MyPageContentProps> = ({
     case "프로필 조회":
       return <ProfileView />;
     case "의뢰요청 조회":
-      return null;
+      return <Request />;
     case "후기 조회":
-      return null;
+      return <Review />;
     case "사업자 인증":
       return <BusinessCert />;
   }

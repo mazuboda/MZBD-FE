@@ -7,6 +7,7 @@ import MyPage from "@pages/MyPage/MyPage";
 import Notice from "@pages/Notice/Notice";
 import Refund from "@pages/Refund/Refund";
 import Resign from "@pages/Resign/Resign";
+import ShoppingBag from "@pages/ShoppingBag/ShoppingBag";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { styled } from "styled-components";
 import './App.css';
@@ -25,6 +26,7 @@ function App() {
             <Route path="/store" element={<Map />} />
             <Route path="/resign" element={<Resign />} />
             <Route path="/refund" element={<Refund />} />
+            <Route path="/shopping" element={<ShoppingBag />} />
           </Routes>
         </ContentContainer>
         <Footer />
